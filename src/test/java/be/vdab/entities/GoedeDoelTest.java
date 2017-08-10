@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 
 import java.math.BigDecimal;
+import java.util.Date;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -36,5 +37,10 @@ public class GoedeDoelTest {
 	public void goedeDoelenMetVerschillendeNaamMoetenVolgensEqualsVerschillendZijn() {
 		assertNotEquals(new GoedeDoel("Unicef"), doel);
 		// extra import: import static org.junit.Assert.assertNotEquals;
+	}
+
+	@Test
+	public void goedDoelVerschiltVanEenObjectMetEenAnderType() {
+		assertNotEquals(doel, new Date());
 	}
 }
