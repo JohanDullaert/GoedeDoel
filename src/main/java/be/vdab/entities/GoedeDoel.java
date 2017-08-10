@@ -25,4 +25,9 @@ public class GoedeDoel {
 		}
 		return ((GoedeDoel) object).naam.equalsIgnoreCase(this.naam);
 	}
+
+	@Override
+	public int hashCode() {
+		return this.naam.toUpperCase().hashCode();
+	}
 }
